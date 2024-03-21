@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class Main {
+
+  public static void main(String[] args) {
+
+    double n;
+    Scanner teclado = new Scanner(System.in);
+    System.out.println("Digite uma nota entre zero e dez: ");
+    n = teclado.nextDouble();
+    if (n >= 0 && n <= 10) {
+      System.out.println("Nota válida!");
+    
+    } else {
+      System.out.println("Nota inválida! ");
+      
+    }
+    
+   
+    teclado.close();
+
+  }
+
+
+}
+
+
