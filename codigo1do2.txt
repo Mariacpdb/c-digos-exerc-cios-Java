@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class codigojava1_2 {
+public class codigo1do2 {
 
   public static void main(String[] args) {
 
