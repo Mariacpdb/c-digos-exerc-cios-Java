@@ -1,0 +1,95 @@
+package exerciciosjava;
+import java.util.Scanner;
+
+
+public class codigo3do2 {
+	
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+  
+        String nome;
+      
+        do {
+            System.out.print("Por favor, insira seu nome (maior que 3 caracteres): ");
+            nome = scanner.nextLine();
+            if (nome.length() <= 3) { System.out.println ("Nome inválido digite novamente. "); 
+              }
+            }  while (nome.length() <= 3);
+
+        
+        int idade;
+        do {
+            System.out.print("Por favor, insira sua idade (entre 0 e 150): ");
+            idade = scanner.nextInt();
+           if (idade < 0 || idade > 150) {
+	          System.out.println ("Idade inválida, digite novamente. ");
+   }
+        } while (idade < 0 && idade > 150);
+        
+          
+        double salario ;  
+          do {
+        	  System.out.println ("Por favor, digite seu salario: ");
+        	  salario = scanner.nextDouble();
+        	if (salario < 0) {
+        		System.out.println ("Salário inválido, digite novamente.");	
+        	}
+          } while (salario < 0);
+          
+          
+          char sexo;
+          do {
+        	  System.out.println ("Por favor digite seu sexo, (f) para feminino, e (m), para masculino:  ");
+        	  sexo = scanner.next().charAt(0);
+        	if (sexo != 'm' && sexo != 'f') {
+        	  
+        	 System.out.println ("Sexo inválido, por favor digite novamente. ");	
+        	}
+        		
+          } while (sexo != 'f' && sexo != 'm');
+          
+          
+         char estadocivil ;
+          
+          do {
+        	  System.out.println("Digite qual seu Estado Civil, (s) para solteiro, (c) para casado/a, (v) para viuvo/a, (d) para divorciado/a: ");
+        	  estadocivil = scanner.next().charAt(0);
+        	 if (estadocivil != 's' && estadocivil != 'c' && estadocivil != 'v' && estadocivil != 'd') {
+        	  System.out.println ("Estado Civil inválido, por favor digite novamente. ");		 
+        	 }
+          }while(estadocivil != 's' && estadocivil != 'c' && estadocivil != 'v' && estadocivil != 'd');
+        	  
+          
+        String genero = (sexo == 'f' ) ? "feminino" : "masculino";
+        String descricaoEstadoCivil;
+        switch (estadocivil) {
+            case 's':
+                descricaoEstadoCivil = "Solteiro/a";
+                break;
+            case 'c':
+                descricaoEstadoCivil = "Casado/a";
+                break;
+            case 'v':
+                descricaoEstadoCivil = "Viúvo/a";
+                break;
+            case 'd':
+                descricaoEstadoCivil = "Divorciado/a";
+                break;
+            default:
+                descricaoEstadoCivil = "Desconhecido";
+                break;
+        }
+        
+        
+        System.out.println("Nome: " + nome + "\n Nome válido");
+        System.out.println("Idade: " + idade + "\n Idade válida");
+        System.out.println("Salário: " + salario + "\n Salário válido");
+        System.out.println("Sexo: " + genero + "\n Sexo válido");
+        System.out.println("Estado Civil: " + descricaoEstadoCivil + "\nEstado Civil válido");
+        
+        scanner.close();
+           
+    }      
+}
