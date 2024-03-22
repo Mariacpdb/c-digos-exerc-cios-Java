@@ -1,6 +1,10 @@
+package exerciciosjava;
+
 import java.util.Scanner;
 
-public class codigojava2_2 {
+public class codigo2do2 {
+	
+
     public static void main(String[] args) {
         String usuario;
         String senha;
@@ -10,12 +14,14 @@ public class codigojava2_2 {
         System.out.println("\nDigite sua senha: ");
         senha = teclado.next();
 
-        if (usuario == senha) {
+        if (usuario.equals(senha)) {
             System.out.println("Dados inválidos! Nome de usuário e senha não podem ser iguais.");
-          } else {
-             System.out.println("Dados válidos! Nome de usuário e senha são diferentes.");
+        } else {
+            System.out.println("Dados válidos! Nome de usuário e senha são diferentes.");
         }
 
         teclado.close();
+
     }
+
 }
