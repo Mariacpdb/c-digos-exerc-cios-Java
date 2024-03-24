@@ -1,0 +1,35 @@
+package exerciciosjava;
+import java.util.Scanner;
+
+public class codigo27do2 {
+
+public static void main(String[] args) {
+
+Scanner teclado = new Scanner(System.in);
+System.out.println("Exercício 11: Contagem de votos em uma eleição:");
+System.out.print("Digite o número total de eleitores: ");
+int numEleitores = teclado.nextInt();
+int[] votos = new int[3]; 
+for (int i = 0; i < numEleitores; i++) {
+    System.out.println("Eleitor " + (i + 1) + ":");
+    System.out.println("1 - Candidato 1");
+    System.out.println("2 - Candidato 2");
+    System.out.println("3 - Candidato 3");
+    System.out.print("Seu voto: ");
+    int voto = teclado.nextInt();
+    if (voto >= 1 && voto <= 3) {
+        votos[voto - 1]++;
+    } else {
+        System.out.println("Voto inválido.");
+        i--; 
+    }
+}
+for (int i = 0; i < 3; i++) {
+    System.out.println("Total de votos do Candidato " + (i + 1) + ": " + votos[i]);
+}
+
+teclado.close();
+
+}
+
+}
