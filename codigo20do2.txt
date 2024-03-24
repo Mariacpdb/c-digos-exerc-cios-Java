@@ -21,7 +21,7 @@ public class codigo20do2 {
         } else {
             System.out.println("Numero fora do intervalo permitido.");
         }
-	       
+	       teclado.close();
 	        }
 
 
