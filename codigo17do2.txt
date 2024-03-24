@@ -15,7 +15,7 @@ public class codigo17do2 {
 	        }
 	        System.out.println("Fatorial de " + n + " e: " + fatorial);
 
-	       
+	    	teclado.close();
 	        }
 	 }
 
