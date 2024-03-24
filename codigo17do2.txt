@@ -1,0 +1,21 @@
+package exerciciosjava;
+
+import java.util.Scanner;
+
+public class codigo17do2 {
+
+	 public static void main(String[] args) {
+		 Scanner teclado = new Scanner(System.in);
+		 
+		 System.out.println(" Digite um numero para calcular o fatorial: ");
+	        int n = teclado.nextInt();
+	        long fatorial = 1;
+	        for (int a = 1; a <= n; ++a) {
+	            fatorial *= a;
+	        }
+	        System.out.println("Fatorial de " + n + " e: " + fatorial);
+
+	       
+	        }
+	 }
+
