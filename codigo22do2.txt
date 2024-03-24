@@ -1,0 +1,27 @@
+package exerciciosjava;
+import java.util.Scanner;
+
+public class codigo22do2 {
+    
+public static void main(String[] args) {
+     
+      Scanner teclado = new Scanner(System.in);
+      
+      
+      System.out.print("Verificação de numero primo e divisores. Digite um numero: ");
+      int numeroP2 = teclado.nextInt();
+      boolean primo2 = true;
+      for (int i = 2; i <= numeroP2 / 2; ++i) {
+          if (numeroP2 % i == 0) {
+              primo2 = false;
+              System.out.println(numeroP2 + " nao e um numero primo. Ele e divisível por " + i);
+              break;
+          }
+      }
+      if (primo2)
+          System.out.println(numeroP2 + " e um numero primo.");
+
+    
+     }
+
+}
