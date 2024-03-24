@@ -1,0 +1,27 @@
+package exerciciosjava;
+import java.util.Scanner;
+
+public class codigo25do2 {
+    
+public static void main(String[] args) {
+     
+      Scanner teclado = new Scanner(System.in);
+      System.out.print("Verificar media de idade da turma. Digite o numero de pessoas: ");
+      int numPessoas = teclado.nextInt();
+      int somaIdades = 0;
+      for (int i = 0; i < numPessoas; i++) {
+          System.out.print("Digite a idade da pessoa " + (i + 1) + ": ");
+          somaIdades += teclado.nextInt();
+      }
+      double mediaIdades = (double) somaIdades / numPessoas;
+      System.out.print("A média de idade da turma é: " + mediaIdades);
+      
+
+
+
+
+
+    
+     }
+
+}
