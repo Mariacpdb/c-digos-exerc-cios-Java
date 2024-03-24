@@ -1,0 +1,40 @@
+package exerciciosjava;
+
+import java.util.Scanner;
+
+public class codigo11do2 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Digite o primeiro número:");
+        int primeiroN = scanner.nextInt();
+
+        
+        
+        System.out.println("Digite o segundo número:");
+        int segundoN = scanner.nextInt();
+     
+        if (primeiroN > segundoN) {
+            int guard = primeiroN;
+            primeiroN = segundoN;
+            segundoN = guard;
+        }
+  
+        System.out.println("Números no intervalo entre " + primeiroN + " e " + segundoN + ":");
+
+        for (int n = primeiroN; n <= segundoN; n++) {
+            System.out.println(n);
+        }
+        
+        int soma = 0;
+        for (int x = primeiroN; x <= segundoN; x++) {
+            System.out.println(x);
+            soma += x;
+        }
+        
+        System.out.println("Soma dos numeros: " + soma);
+        
+
+        scanner.close();
+    }
+}
