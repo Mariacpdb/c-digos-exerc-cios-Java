@@ -1,0 +1,29 @@
+	       
+package exerciciosjava;
+import java.util.Scanner;
+
+public class codigo23do2 {
+    
+public static void main(String[] args) {
+     
+      Scanner teclado = new Scanner(System.in);
+      System.out.println("Mostrar numeros primos ate N. Digite um numero N: ");
+      int n = teclado.nextInt();
+      int contDivisoes = 0;
+      for (int i = 2; i <= n; i++) {
+          boolean ePrimo = true;
+          for (int j = 2; j <= Math.sqrt(i); j++) {
+              contDivisoes++;
+              if (i % j == 0) {
+                  ePrimo = false;
+                  break;
+              }
+          }
+          if (ePrimo)
+              System.out.println(i + " e primo.");
+      }
+      System.out.println("Numero total de divisoes: " + contDivisoes);
+    
+     }
+
+}
