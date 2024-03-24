@@ -1,0 +1,27 @@
+package exerciciosjava;
+import java.util.Scanner;
+
+
+public class codigo7do2 {
+	 public static void main(String[] args) {
+		 Scanner teclado = new Scanner(System.in);
+		 
+		 double maior = 0;
+		 int cont;
+		 double n;
+		 
+		 for (cont = 1; cont <= 5; cont++) {
+			 System.out.println("Escreva o " + cont + "o numero: ");
+			  n = teclado.nextDouble();
+		
+		    if (n > maior) {
+		    	maior = n;
+		 }
+		 
+			 
+		 }
+		    System.out.println("O maior numero é: " + maior);
+		    
+		teclado.close();
+	 }
+}
