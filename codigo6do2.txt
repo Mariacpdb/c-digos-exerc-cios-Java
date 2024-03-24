@@ -1,0 +1,19 @@
+package exerciciosjava;
+
+public class codigo6do2 {
+	 public static void main(String[] args) {
+		 
+		 for (int I = 1; I <= 20; I++ ) {
+			 System.out.println("Imprimindo um abaixo do outro: " + I);
+			 
+		 }
+		 
+		 System.out.println("Imprimindo um ao lado do outro: ");
+		 for (int I2 = 1; I2 <= 20; I2++) {
+			
+			 System.out.print(I2 + ",");
+		 }
+		 
+		 
+	 }
+}
