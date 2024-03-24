@@ -21,7 +21,7 @@ public static void main(String[] args) {
       if (primo2)
           System.out.println(numeroP2 + " e um numero primo.");
 
-    
+        teclado.close();
      }
 
 }
