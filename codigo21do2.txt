@@ -20,7 +20,7 @@ public static void main(String[] args) {
       else
           System.out.println(numeroP + " não é um número primo.");
 
-    
+       teclado.close();
      }
 
 }
