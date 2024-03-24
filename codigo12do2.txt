@@ -1,0 +1,30 @@
+package exerciciosjava;
+
+import java.util.Scanner;
+
+public class codigo12do2 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        
+        System.out.println("Digite um número inteiro entre 1 e 10:");
+        int n = scanner.nextInt();
+
+        
+        if (n < 1 || n > 10) {
+            System.out.println("Número inválido. Por favor, insira um número entre 1 e 10.");
+            return;
+        }
+
+        
+        System.out.println("Tabuada de " + n + ":");
+
+       
+        for (int a = 1; a <= 10; a++) {
+            int resultado = n * a;
+            System.out.println(n + " X " + a + " = " + resultado);
+        }
+
+        scanner.close();
+    }
+}
