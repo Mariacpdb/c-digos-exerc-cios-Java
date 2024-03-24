@@ -1,0 +1,42 @@
+package exerciciosjava;
+
+
+import java.util.Scanner;
+
+public class codigo26do2 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Digite o número total de eleitores: ");
+        int totalEleitores = scanner.nextInt();
+        
+        int votosCandidato1 = 0, votosCandidato2 = 0, votosCandidato3 = 0;
+        
+        for (int i = 0; i < totalEleitores; i++) {
+            System.out.println("Eleitor " + (i + 1) + ":");
+            System.out.println("Digite o numero do candidato (1, 2 ou 3): ");
+            int voto = scanner.nextInt();
+            
+            switch (voto) {
+                case 1:
+                    votosCandidato1++;
+                    break;
+                case 2:
+                    votosCandidato2++;
+                    break;
+                case 3:
+                    votosCandidato3++;
+                    break;
+                default:
+                    System.out.println("Opcao invalida. Voto não sera contado.");
+            }
+        }
+        
+        System.out.println("Resultado da eleicao:");
+        System.out.println("Candidato 1: " + votosCandidato1 + " votos");
+        System.out.println("Candidato 2: " + votosCandidato2 + " votos");
+        System.out.println("Candidato 3: " + votosCandidato3 + " votos");
+        
+        scanner.close();
+    }
+}
