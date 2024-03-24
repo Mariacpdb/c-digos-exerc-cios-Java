@@ -1,0 +1,31 @@
+package exerciciosjava;
+import java.util.Scanner;  
+
+
+
+public class codigo20do2 {
+	
+     
+	 public static void main(String[] args) {
+            
+        Scanner teclado = new Scanner(System.in);
+        System.out.println("Calculo do fatorial (limitado a números inteiros positivos e menores que 16):");
+        System.out.print("Digite um número para calcular o fatorial (limite máximo 15): ");
+        int num2 = teclado.nextInt();
+        if (num2 >= 0 && num2 <= 15) {
+            long fatorial2 = 1;
+            for (int i = 1; i <= num2; ++i) {
+                fatorial2 *= i;
+            }
+            System.out.println("Fatorial de " + num2 + " é " + fatorial2);
+        } else {
+            System.out.println("Numero fora do intervalo permitido.");
+        }
+	       
+	        }
+
+
+	
+	
+	
+}
