@@ -1,0 +1,26 @@
+package exerciciosjava;
+import java.util.Scanner;
+
+public class codigo21do2 {
+    
+public static void main(String[] args) {
+     
+      Scanner teclado = new Scanner(System.in);
+      System.out.println(" Verificação de número primo. Digite um número: ");
+      int numeroP = teclado.nextInt();
+      boolean primo = true;
+      for (int i = 2; i <= numeroP / 2; ++i) {
+          if (numeroP % i == 0) {
+              primo = false;
+              break;
+          }
+      }
+      if (primo)
+          System.out.println(numeroP + " é um número primo.");
+      else
+          System.out.println(numeroP + " não é um número primo.");
+
+    
+     }
+
+}
