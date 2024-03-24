@@ -1,0 +1,25 @@
+	       
+package exerciciosjava;
+import java.util.Scanner;
+
+public class codigo24do2 {
+    
+public static void main(String[] args) {
+     
+      Scanner teclado = new Scanner(System.in);
+      
+      
+      System.out.println("Calcular media aritmetica de N notas. Digite a quantidade de notas: ");
+      int quantNotas = teclado.nextInt();
+      int somaNotas = 0;
+      for (int i = 0; i < quantNotas; i++) {
+          System.out.print("Digite a nota " + (i + 1) + ": ");
+          somaNotas += teclado.nextInt();
+      }
+      double mediaNotas = (double) somaNotas / quantNotas;
+      System.out.println("A media das notas e: " + mediaNotas);
+
+    
+     }
+
+}
