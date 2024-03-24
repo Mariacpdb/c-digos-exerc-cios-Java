@@ -26,6 +26,7 @@ public class codigo19do2 {
         System.out.println("Menor valor: " + menor2);
         System.out.println("Maior valor: " + maior2);
         System.out.println("Soma dos valores: " + soma2);
+         teclado.close();
 	       
     }
 
