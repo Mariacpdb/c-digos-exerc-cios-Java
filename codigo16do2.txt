@@ -18,5 +18,7 @@ public class codigo16do2 {
 	            b = c;
 	        }
 	        System.out.println();
+	        
+	    	teclado.close();
    }
 }
