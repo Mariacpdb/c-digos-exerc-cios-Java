@@ -1,0 +1,27 @@
+package exerciciosjava;
+
+
+
+public class codigo4do2 {
+	public static void main(String[] args) {
+		
+		
+     	int A = 8000;
+		double taxaA = 0.03;
+		int B = 20000;		
+		double taxaB = 0.015;
+		int anos = 0;
+		
+		while (A <= B) {
+			
+			
+			A += A * taxaA;
+			B += B * taxaB;
+			anos++;
+			
+			
+		}
+		
+		System.out.println("O numero de anos necessarios e: " + anos);
+	}
+}
