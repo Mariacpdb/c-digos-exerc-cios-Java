@@ -1,0 +1,22 @@
+package exerciciosjava;
+import java.util.Scanner;
+
+
+
+public class codigo16do2 {
+	
+	 public static void main(String[] args) {
+	        Scanner teclado = new Scanner(System.in);
+
+	        
+	        System.out.println("Serie de Fibonacci até  maior que 500:");
+	        int a = 0, b = 1, c;
+	        while (a <= 500) {
+	            System.out.print(a + ", " );
+	            c = a + b;
+	            a = b;
+	            b = c;
+	        }
+	        System.out.println();
+   }
+}
