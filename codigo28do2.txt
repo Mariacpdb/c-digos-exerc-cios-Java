@@ -3,31 +3,23 @@ package exerciciosjava;
 import java.util.Scanner;
 
 public class codigo28do2 {
-    
-public static void main(String[] args) {
-     
-      Scanner teclado = new Scanner(System.in);
-      System.out.print("\nExercício 12: Calcular número médio de alunos por turma. Digite a quantidade de turmas: ");
-      int numTurmas = teclado.nextInt();
-      int somaAlunos = 0;
-      for (int i = 1; i <= numTurmas; i++) {
-          System.out.print("Digite a quantidade de alunos na turma " + i + ": ");
-          int numAlunos = teclado.nextInt();
-          while (numAlunos > 40) {
-              System.out.println("Turma não pode ter mais de 40 alunos. Digite novamente.");
-              System.out.print("Digite a quantidade de alunos na turma " + i + ": ");
-              numAlunos = teclado.nextInt();
-          }
-          somaAlunos += numAlunos;
-      }
-      double mediaAlunos = (double) somaAlunos / numTurmas;
-      System.out.println("Número médio de alunos por turma: " + mediaAlunos);
-      
-      
-      teclado.close();
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
+        System.out.print("Digite a quantidade de CDs na coleção: ");
+        int numCDs = scanner.nextInt();
+        double totalInvestido = 0;
 
-    
-     }
+        for (int i = 1; i <= numCDs; i++) {
+            System.out.print("Digite o valor do CD " + i + ": ");
+            double valorCD = scanner.nextDouble();
+            totalInvestido += valorCD;
+        }
 
+        double valorMedioPorCD = totalInvestido / numCDs;
+        System.out.printf("O valor total investido na coleção é: R$%.2f\n", totalInvestido);
+        System.out.printf("O valor médio gasto em cada CD é: R$%.2f\n", valorMedioPorCD);
+
+        scanner.close();
+    }
 }
