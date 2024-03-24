@@ -19,7 +19,7 @@ public static void main(String[] args) {
       double mediaNotas = (double) somaNotas / quantNotas;
       System.out.println("A media das notas e: " + mediaNotas);
 
-    
+          teclado.close();
      }
 
 }
