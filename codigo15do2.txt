@@ -1,0 +1,27 @@
+package exerciciosjava;
+
+import java.util.Scanner;
+
+public class codigo15do2 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Digite o valor: ");
+        int n = scanner.nextInt();
+        
+        System.out.println("Fibonacci até o " + n + "o numero:");
+        for (int a = 1; a <= n; a++) {
+            System.out.print(calFibonacci(a) + " ");
+        }
+        
+        scanner.close();
+    }
+    
+    public static int calFibonacci(int n) {
+        if (n <= 1) {
+            return n;
+           } else {
+            return calFibonacci(n - 1) + calFibonacci(n - 2);
+        }
+    }
+}
