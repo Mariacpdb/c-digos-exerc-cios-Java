@@ -1,0 +1,33 @@
+package exerciciosjava;
+import java.util.Scanner;
+
+public class codigo39do2 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int alunoMaisAlto = 0, alunoMaisBaixo = 0;
+        int alturaMaisAlta = 0, alturaMaisBaixa = Integer.MAX_VALUE;
+
+        for (int i = 1; i <= 10; i++) {
+            System.out.print("Número do aluno " + i + ": ");
+            int numeroAluno = scanner.nextInt();
+            System.out.print("Altura do aluno (em cm): ");
+            int alturaAluno = scanner.nextInt();
+
+            if (alturaAluno > alturaMaisAlta) {
+                alturaMaisAlta = alturaAluno;
+                alunoMaisAlto = numeroAluno;
+            }
+
+            if (alturaAluno < alturaMaisBaixa) {
+                alturaMaisBaixa = alturaAluno;
+                alunoMaisBaixo = numeroAluno;
+            }
+        }
+
+        System.out.println("Aluno mais alto: " + alunoMaisAlto + " - Altura: " + alturaMaisAlta + "cm");
+        System.out.println("Aluno mais baixo: " + alunoMaisBaixo + " - Altura: " + alturaMaisBaixa + "cm");
+
+        scanner.close();
+    }
+}
