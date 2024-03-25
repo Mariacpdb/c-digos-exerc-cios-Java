@@ -1,0 +1,53 @@
+package exerciciosjava;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class codigo46do2 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        while (true) {
+            System.out.print("Nome do atleta (ou 'FIM' para encerrar): ");
+            String nomeAtleta = scanner.nextLine();
+
+            if (nomeAtleta.equals("FIM")) {
+                break;
+            }
+
+            ArrayList<Double> saltos = new ArrayList<>();
+
+            for (int i = 1; i <= 5; i++) {
+                System.out.print("Informe a distância do " + i + "º salto: ");
+                double distanciaSalto = scanner.nextDouble();
+                saltos.add(distanciaSalto);
+            }
+
+            double melhorSalto = Double.MIN_VALUE;
+            double piorSalto = Double.MAX_VALUE;
+            double totalSaltos = 0;
+
+            for (double salto : saltos) {
+                totalSaltos += salto;
+
+                if (salto > melhorSalto) {
+                    melhorSalto = salto;
+                }
+
+                if (salto < piorSalto) {
+                    piorSalto = salto;
+                }
+            }
+
+            totalSaltos -= (melhorSalto + piorSalto);
+            double mediaSaltos = totalSaltos / 3;
+
+            System.out.println("\nResultado final:");
+            System.out.println("Atleta: " + nomeAtleta);
+            System.out.println("Melhor salto: " + melhorSalto + " m");
+            System.out.println("Pior salto: " + piorSalto + " m");
+            System.out.printf("Média dos demais saltos: %.1f m\n\n", mediaSaltos);
+        }
+
+        scanner.close();
+    }
+}
