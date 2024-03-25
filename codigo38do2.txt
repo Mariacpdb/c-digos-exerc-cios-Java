@@ -1,0 +1,24 @@
+package exerciciosjava;
+
+import java.util.Scanner;
+
+public class codigo38do2 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite o salário inicial do funcionário: ");
+        double salarioInicial = scanner.nextDouble();
+
+        double percentualAumento = 1.5;
+
+        double salario = salarioInicial;
+        for (int ano = 1996; ano <= 2022; ano++) {
+            salario += salario * (percentualAumento / 100);
+            percentualAumento *= 2;
+        }
+
+        System.out.printf("Salário atual do funcionário em 2023: R$%.2f\n", salario);
+
+        scanner.close();
+    }
+}
