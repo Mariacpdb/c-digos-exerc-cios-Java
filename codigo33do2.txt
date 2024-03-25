@@ -1,0 +1,41 @@
+package exerciciosjava;
+import java.util.Scanner;
+
+
+public class codigo33do2 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Digite as temperaturas (digite 0 para finalizar): ");
+        
+        double min = Double.MAX_VALUE;
+        double max = Double.MIN_VALUE;
+        double soma = 0;
+        int count = 0;
+        
+        while (true) {
+            double temperatura = scanner.nextDouble();
+            if (temperatura == 0) {
+                break;
+            }
+            soma += temperatura;
+            count++;
+            if (temperatura < min) {
+                min = temperatura;
+            }
+            if (temperatura > max) {
+                max = temperatura;
+            }
+        }
+        
+        if (count > 0) {
+            double media = soma / count;
+            System.out.println("Menor temperatura: " + min);
+            System.out.println("Maior temperatura: " + max);
+            System.out.println("Média das temperaturas: " + media);
+        } else {
+            System.out.println("Nenhuma temperatura foi inserida.");
+        }
+        
+        scanner.close();
+    }
+}
