@@ -1,0 +1,29 @@
+package exerciciosjava;
+
+
+
+import java.util.Scanner;
+
+public class codigo32do2 {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        System.out.print("Fatorial de: ");
+        int n = teclado.nextInt();
+        
+        int fatorial = 1;
+        for (int i = n; i >= 1; i--) {
+            fatorial *= i;
+        }
+        
+        System.out.print(n + "! = ");
+        for (int i = n; i >= 1; i--) {
+            System.out.print(i);
+            if (i != 1) {
+                System.out.print(" . ");
+            }
+        }
+        System.out.println(" = " + fatorial);
+        
+        teclado.close();
+    }
+}
