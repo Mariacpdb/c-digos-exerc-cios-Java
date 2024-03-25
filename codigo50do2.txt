@@ -1,0 +1,21 @@
+package exerciciosjava;
+import java.util.Scanner;
+
+public class codigo50do2 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite o valor de N para calcular H: ");
+        int N = scanner.nextInt();
+
+        double soma = 0;
+
+        for (int i = 1; i <= N; i++) {
+            soma += 1.0 / i;
+        }
+
+        System.out.println("Valor de H: " + soma);
+
+        scanner.close();
+    }
+}
