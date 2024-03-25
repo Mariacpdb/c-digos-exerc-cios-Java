@@ -1,0 +1,31 @@
+	       
+package exerciciosjava;
+import java.util.Scanner;
+
+public class codigo31do2 {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        double total = 0;
+        
+        while (true) {
+            System.out.print("Informe o preço do produto (0 para finalizar): R$ ");
+            double preco = teclado.nextDouble();
+            
+            if (preco == 0) {
+                break;
+            }
+            
+            total += preco;
+        }
+        
+        System.out.println("Total: R$ " + total);
+        
+        System.out.print("Dinheiro fornecido pelo cliente: R$ ");
+        double dinheiro = teclado.nextDouble();
+        
+        double troco = dinheiro - total;
+        System.out.println("Troco: R$ " + troco);
+        
+        teclado.close();
+    }
+}
