@@ -1,0 +1,50 @@
+package exerciciosjava;
+import java.util.Scanner;
+
+public class codigo44do2 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int[] votos = new int[6];
+        int totalVotos = 0;
+
+        System.out.println("1 - José");
+        System.out.println("2 - João");
+        System.out.println("3 - Maria");
+        System.out.println("4 - Ana");
+        System.out.println("5 - Voto Nulo");
+        System.out.println("6 - Voto em Branco");
+
+        while (true) {
+            System.out.print("Digite o código do voto (ou 0 para encerrar): ");
+            int voto = scanner.nextInt();
+
+            if (voto == 0) {
+                break;
+            }
+
+            if (voto >= 1 && voto <= 6) {
+                votos[voto - 1]++;
+                totalVotos++;
+            } else {
+                System.out.println("Código inválido. Tente novamente.");
+            }
+        }
+
+        System.out.println("Total de votos para cada candidato:");
+        System.out.println("José: " + votos[0]);
+        System.out.println("João: " + votos[1]);
+        System.out.println("Maria: " + votos[2]);
+        System.out.println("Ana: " + votos[3]);
+        System.out.println("Votos Nulos: " + votos[4]);
+        System.out.println("Votos em Branco: " + votos[5]);
+
+        double percentualNulos = (double) votos[4] / totalVotos * 100;
+        double percentualBrancos = (double) votos[5] / totalVotos * 100;
+
+        System.out.printf("Percentual de votos nulos sobre o total de votos: %.2f%%\n", percentualNulos);
+        System.out.printf("Percentual de votos em branco sobre o total de votos: %.2f%%\n", percentualBrancos);
+
+        scanner.close();
+    }
+}
