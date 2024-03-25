@@ -1,0 +1,52 @@
+package exerciciosjava;
+import java.util.Scanner;
+
+public class codigo40do2 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int maiorIndiceAcidentes = Integer.MIN_VALUE, menorIndiceAcidentes = Integer.MAX_VALUE;
+        String cidadeMaiorIndice = "", cidadeMenorIndice = "";
+        int somaVeiculos = 0, qtdCidadesMenos2000Veiculos = 0, somaAcidentesMenos2000 = 0;
+
+        for (int i = 1; i <= 5; i++) {
+            System.out.println("Cidade " + i);
+            System.out.print("Código da cidade: ");
+            int codigoCidade = scanner.nextInt();
+            System.out.print("Número de veículos de passeio em 1999: ");
+            int veiculos1999 = scanner.nextInt();
+            System.out.print("Número de acidentes de trânsito com vítimas em 1999: ");
+            int acidentes1999 = scanner.nextInt();
+
+            int indiceAcidentes = acidentes1999 / veiculos1999;
+
+            if (indiceAcidentes > maiorIndiceAcidentes) {
+                maiorIndiceAcidentes = indiceAcidentes;
+                cidadeMaiorIndice = "Cidade " + codigoCidade;
+            }
+
+            if (indiceAcidentes < menorIndiceAcidentes) {
+                menorIndiceAcidentes = indiceAcidentes;
+                cidadeMenorIndice = "Cidade " + codigoCidade;
+            }
+
+            somaVeiculos += veiculos1999;
+
+            if (veiculos1999 < 2000) {
+                qtdCidadesMenos2000Veiculos++;
+                somaAcidentesMenos2000 += acidentes1999;
+            }
+        }
+
+        double mediaVeiculos = (double) somaVeiculos / 5;
+        double mediaAcidentesMenos2000 = (double) somaAcidentesMenos2000 / qtdCidadesMenos2000Veiculos;
+
+        System.out.println("Maior índice de acidentes: " + maiorIndiceAcidentes + " - Cidade: " + cidadeMaiorIndice);
+        System.out.println("Menor índice de acidentes: " + menorIndiceAcidentes + " - Cidade: " + cidadeMenorIndice);
+        System.out.println("Média de veículos nas cidades: " + mediaVeiculos);
+        System.out.println("Média de acidentes nas cidades com menos de 2.000 veículos de passeio: " + mediaAcidentesMenos2000);
+
+        scanner.close();
+    }
+}
+
