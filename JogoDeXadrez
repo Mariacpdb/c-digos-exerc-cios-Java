@@ -1,0 +1,75 @@
+
+abstract class Peca {
+    protected String cor;
+    protected int posicaoX;
+    protected int posicaoY;
+
+    public Peca(String cor, int posicaoX, int posicaoY) {
+        this.cor = cor;
+        this.posicaoX = posicaoX;
+        this.posicaoY = posicaoY;
+    }
+
+    public abstract boolean movimentoValido(int destinoX, int destinoY);
+}
+
+
+class MovimentoIlegalException extends Exception {
+    public MovimentoIlegalException(String mensagem) {
+        super(mensagem);
+    }
+}
+
+
+class Peao extends Peca {
+    public Peao(String cor, int posicaoX, int posicaoY) {
+        super(cor, posicaoX, posicaoY);
+    }
+
+    
+    public boolean movimentoValido(int destinoX, int destinoY) {
+        
+        return true;
+    }
+}
+
+
+class Tabuleiro {
+    private Peca[][] pecas = new Peca[8][8];
+
+    public void adicionarPeca(Peca peca, int x, int y) {
+        pecas[x][y] = peca;
+    }
+
+    public void moverPeca(int origemX, int origemY, int destinoX, int destinoY) throws MovimentoIlegalException {
+        Peca peca = pecas[origemX][origemY];
+        if (peca == null) {
+            throw new MovimentoIlegalException("Não há peça na posição de origem.");
+        }
+        if (!peca.movimentoValido(destinoX, destinoY)) {
+            throw new MovimentoIlegalException("Movimento ilegal para a peça.");
+        }
+        
+        pecas[destinoX][destinoY] = peca;
+        pecas[origemX][origemY] = null;
+    }
+}
+
+
+public class JogoDeXadrez {
+    private Tabuleiro tabuleiro;
+
+    public JogoDeXadrez() {
+        tabuleiro = new Tabuleiro();
+        
+    }
+
+    public void jogar() {
+        
+    }
+
+    public static void main(String[] args) {
+        JogoDeXadrez jogo = new JogoDeXadrez();
+        jogo.jogar();
+    }
+}
